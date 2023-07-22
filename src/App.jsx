@@ -8,6 +8,9 @@ import { Tabs, Flowbite, Dropdown } from "flowbite-react";
 import theme from "../src/config/theme.config";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage, SorterPage } from "./pages";
+import bg1 from "./assets/bg_01.jpg";
+import bg2 from "./assets/bg_02.jpg";
+import bg3 from "./assets/bg_03.jpg";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -21,8 +24,9 @@ function App() {
 
   const generateRandomBG = () => {
     var totalCount = 3;
+    const arrImg = [bg1, bg2, bg3];
     var num = Math.ceil(Math.random() * totalCount);
-    document.body.background = `src/assets/bg_0${num}.jpg`;
+    document.body.background = arrImg[num - 1];
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
   };

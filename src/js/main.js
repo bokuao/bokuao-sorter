@@ -56,9 +56,9 @@ let storedSaveType = localStorage.getItem(`${sorterURL}_saveType`);
 /** Initialize script. */
 function init() {
   /** Define button behavior. */
-  document
-    .querySelector(".starting.start.button")
-    .addEventListener("click", start);
+  // document
+  //   .querySelector(".starting.start.button")
+  //   .addEventListener("click", start);
   document
     .querySelector(".starting.load.button")
     .addEventListener("click", loadProgress);
@@ -128,7 +128,7 @@ function init() {
           break;
       }
     } else if (timeTaken && choices.length === battleNo - 1) {
-    /** If sorting has ended. */
+      /** If sorting has ended. */
       switch (ev.key) {
         case "k":
         case "1":
@@ -811,8 +811,11 @@ function populateOptions() {
     }> ${name}</label></div>`;
   };
   const optInsertLarge = (name, id, tooltip, checked = true) => {
-    var _id = tooltip ? tooltip : name
-    return `<div class="large option"><label id="${_id.replace(/\s/g, "")}" title="${
+    var _id = tooltip ? tooltip : name;
+    return `<div class="large option"><label id="${_id.replace(
+      /\s/g,
+      ""
+    )}" title="${
       tooltip ? tooltip : name
     }"><input id="cbgroup-${id}" type="checkbox" ${
       checked ? "checked" : ""
@@ -1034,4 +1037,6 @@ function reduceTextWidth(text, font, width) {
   }
 }
 
-window.onload = init;
+// window.onload = init;
+
+export { init, start };

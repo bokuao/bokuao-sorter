@@ -90,7 +90,7 @@ function init() {
     .querySelector(".finished.list.button")
     .addEventListener("click", generateTextList);
 
-  document.querySelector(".clearsave").addEventListener("click", clearProgress);
+  // document.querySelector(".clearsave").addEventListener("click", clearProgress);
 
   /** Define keyboard controls (up/down/left/right vimlike k/j/h/l). */
   document.addEventListener("keypress", (ev) => {

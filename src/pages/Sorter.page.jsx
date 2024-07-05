@@ -1,20 +1,100 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Tabs, Flowbite, Dropdown } from "flowbite-react";
 import * as mainScript from "../js/main";
+import { useScreenSize } from "../hooks";
+
+const MobileView = ({}) => {
+  return (
+    <div className="is-mobile sorter">
+      <img src="../src/assets/defaultL.jpg" className="left sort image" />
+      <div
+        className="starting start button"
+        onClick={() => {
+          mainScript.init();
+          mainScript.start();
+        }}
+      >
+        Boku Ga Mitakatta Aozora Members Sorter
+        <br />
+        <br />
+        Click to Start!
+      </div>
+      <div className="starting load button">
+        Load <span></span>
+      </div>
+
+      <div className="loading button">
+        <div></div>
+        <span>Loading...</span>
+      </div>
+
+      <div className="sorting tie button">Tie</div>
+      <div className="sorting undo button">Undo</div>
+      <div className="sorting save button">Save Progress</div>
+
+      <div className="finished save button">Generate Result URL</div>
+      <div className="finished getimg button">Generate Image</div>
+      <div className="finished list button">Generate Text List</div>
+
+      <img src="../src/assets/defaultR.jpg" className="right sort image" />
+
+      <div className="left sort text">
+        <p></p>
+      </div>
+      <div className="right sort text">
+        <p></p>
+      </div>
+    </div>
+  );
+};
+
+const LaptopView = ({}) => {
+  return (
+    <div className="sorter ">
+      <img src="../src/assets/defaultL.jpg" className="left sort image" />
+      <div
+        className="starting start button"
+        onClick={() => {
+          mainScript.init();
+          mainScript.start();
+        }}
+      >
+        Boku Ga Mitakatta Aozora Members Sorter
+        <br />
+        <br />
+        Click to Start!
+      </div>
+      <div className="starting load button">
+        Load <span></span>
+      </div>
+
+      <div className="loading button">
+        <div></div>
+        <span>Loading...</span>
+      </div>
+
+      <div className="sorting tie button">Tie</div>
+      <div className="sorting undo button">Undo</div>
+      <div className="sorting save button">Save Progress</div>
+
+      <div className="finished save button">Generate Result URL</div>
+      <div className="finished getimg button">Generate Image</div>
+      <div className="finished list button">Generate Text List</div>
+
+      <img src="../src/assets/defaultR.jpg" className="right sort image" />
+
+      <div className="left sort text">
+        <p></p>
+      </div>
+      <div className="right sort text">
+        <p></p>
+      </div>
+    </div>
+  );
+};
 
 const SorterPage = ({}) => {
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-
-  //   script.src = "../src/js/data.js";
-  //   script.async = true;
-
-  //   document.head.appendChild(script);
-
-  //   return () => {
-  //     document.head.removeChild(script);
-  //   };
-  // }, []);
+  const screenSize = useScreenSize();
 
   return (
     <div>
@@ -29,57 +109,15 @@ const SorterPage = ({}) => {
             </div>
           </div>
 
-          <div className="sorter">
-            <img src="../src/assets/defaultL.jpg" className="left sort image" />
-
-            <div
-              className="starting start button"
-              onClick={() => {
-                mainScript.init();
-                mainScript.start();
-              }}
-            >
-              Boku Ga Mitakatta Aozora Members Sorter
-              <br />
-              <br />
-              Click to Start!
-            </div>
-            <div className="starting load button">
-              Load <span></span>
-            </div>
-
-            <div className="loading button">
-              <div></div>
-              <span>Loading...</span>
-            </div>
-
-            <div className="sorting tie button">Tie</div>
-            <div className="sorting undo button">Undo</div>
-            <div className="sorting save button">Save Progress</div>
-
-            <div className="finished save button">Generate Result URL</div>
-            <div className="finished getimg button">Generate Image</div>
-            <div className="finished list button">Generate Text List</div>
-
-            <img
-              src="../src/assets/defaultR.jpg"
-              className="right sort image"
-            />
-
-            <div className="left sort text">
-              <p></p>
-            </div>
-            <div className="right sort text">
-              <p></p>
-            </div>
-          </div>
+          {screenSize.width < 1024 ? <MobileView /> : <LaptopView />}
 
           <div className="options"></div>
           <div className="image selector">Display Images on Result:</div>
           <div className="time taken"></div>
           <div className="results"></div>
 
-          <div className="info">
+          {/* TODO : jadiin ini modal CREDIT | HOW TO PLAY | CONTACT */}
+          {/* <div className="info">
             <a href="mailto:gatholocogandhul@gmail.com">Contact</a> |
             <a href="https://github.com/execfera/charasort/">Source Code</a> |
             <a className="clearsave">Clear Save Data</a>
@@ -116,7 +154,7 @@ const SorterPage = ({}) => {
             <br />
             <br />
             <p>20230716 - Added 1st Generation.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

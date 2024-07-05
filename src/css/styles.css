@@ -137,6 +137,26 @@ body {
   border: 1px solid #000000;
 }
 
+/* FOR MOBILE */
+.is-mobile.sorter {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  grid-gap: none;
+}
+@media (min-width: 1024px) {
+  .is-mobile.sorter.laptop\:hidden {
+    display: none;
+  }
+}
+.is-mobile.sorter > .left {
+  grid-column: none;
+}
+.is-mobile.sorter > .right {
+  grid-column: none;
+}
+
 .sorter > .right {
   grid-column: 3 / 4;
   border: 1px solid #000000;

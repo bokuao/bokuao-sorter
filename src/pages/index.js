@@ -1,4 +1,4 @@
 import HomePage from "./Home.page";
-import SorterPage from "./Sorter.page";
+import SorterMember from "./SorterMember.page";
 
-export { HomePage, SorterPage };
+export { HomePage, SorterMember };

@@ -379,10 +379,18 @@ function display() {
   const leftChar = characterDataToSort[leftCharIndex];
   const rightChar = characterDataToSort[rightCharIndex];
 
-  const charNameDisp = (name) => {
+  const charNameDisp = (name, desc) => {
+    // build name
     const charName = reduceTextWidth(name, "Arial 12.8px", 220);
     const charTooltip = name !== charName ? name : "";
-    return `<p title="${charTooltip}">${charName}</p>`;
+    let htmlName = `<p title="${charTooltip}">${charName}</p>`
+
+    // build desc
+    const charDesc = reduceTextWidth(desc, "Arial 11px", 220);
+    let htmlDesc = `<p>${charDesc}</p>`
+
+
+    return `${htmlName}${htmlDesc}`;
   };
 
   progressBar(`Battle No. ${battleNo}`, percent);
@@ -391,10 +399,12 @@ function display() {
   document.querySelector(".right.sort.image").src = rightChar.img;
 
   document.querySelector(".left.sort.text").innerHTML = charNameDisp(
-    leftChar.name
+    leftChar.name,
+    leftChar.desc
   );
   document.querySelector(".right.sort.text").innerHTML = charNameDisp(
-    rightChar.name
+    rightChar.name,
+    rightChar.desc
   );
 
   /** Autopick if choice has been given. */

@@ -1,11 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Tabs, Flowbite, Dropdown } from "flowbite-react";
-import * as mainScript from "../js/main";
+import * as mainScript from "../js/members/main";
 import { useScreenSize } from "../hooks";
 
 const MobileView = ({}) => {
   return (
     <div className="is-mobile sorter">
+      <div className="left sort text">
+        <p></p>
+      </div>
       <img src="../src/assets/defaultL.jpg" className="left sort image" />
       <div
         className="starting start button"
@@ -38,9 +41,6 @@ const MobileView = ({}) => {
 
       <img src="../src/assets/defaultR.jpg" className="right sort image" />
 
-      <div className="left sort text">
-        <p></p>
-      </div>
       <div className="right sort text">
         <p></p>
       </div>
@@ -93,7 +93,7 @@ const LaptopView = ({}) => {
   );
 };
 
-const SorterPage = ({}) => {
+const SorterMemberPage = ({}) => {
   const screenSize = useScreenSize();
 
   return (
@@ -117,8 +117,8 @@ const SorterPage = ({}) => {
           <div className="results"></div>
 
           {/* TODO : jadiin ini modal CREDIT | HOW TO PLAY | CONTACT */}
-          {/* <div className="info">
-            <a href="mailto:gatholocogandhul@gmail.com">Contact</a> |
+          <div className="info">
+            {/* <a href="mailto:gatholocogandhul@gmail.com">Contact</a> |
             <a href="https://github.com/execfera/charasort/">Source Code</a> |
             <a className="clearsave">Clear Save Data</a>
             <br />
@@ -153,12 +153,12 @@ const SorterPage = ({}) => {
             </p>
             <br />
             <br />
-            <p>20230716 - Added 1st Generation.</p>
-          </div> */}
+            <p>20230716 - Added 1st Generation.</p> */}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SorterPage;
+export default SorterMemberPage;

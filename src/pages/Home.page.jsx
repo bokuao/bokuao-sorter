@@ -3,13 +3,13 @@ import { Tabs, Flowbite, Dropdown } from "flowbite-react";
 import Cloud2 from "../assets/cloud_s02.png";
 import { redirect, useNavigate } from "react-router-dom";
 
-const SorterPage = ({}) => {
+const HomePage = ({}) => {
   const _navigate = useNavigate();
   return (
     <div>
       <div className="flex flex-col gap-5 justify-center">
-        <h1 className="font-mono text-white drop-shadow-md mobile:text-8xl">
-          Boku Ao Playground
+        <h1 className="font-mono text-white drop-shadow-md mobile:text-9xl">
+          BokuAo Playground
         </h1>
       </div>
       <div
@@ -27,4 +27,4 @@ const SorterPage = ({}) => {
   );
 };
 
-export default SorterPage;
+export default HomePage;

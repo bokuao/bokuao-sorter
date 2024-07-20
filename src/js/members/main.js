@@ -54,7 +54,7 @@ let sorterURL = window.location.host + window.location.pathname;
 let storedSaveType = localStorage.getItem(`${sorterURL}_saveType`);
 
 /** Initialize script. */
-function init() {
+function init_member() {
   /** Define button behavior. */
   // document
   //   .querySelector(".starting.start.button")
@@ -386,7 +386,7 @@ function display() {
     let htmlName = `<p title="${charTooltip}">${charName}</p>`
 
     // build desc
-    const charDesc = reduceTextWidth(desc, "Arial 11px", 220);
+    const charDesc = reduceTextWidth(desc, "Arial 10px", 220);
     let htmlDesc = `<p>${charDesc}</p>`
 
 
@@ -1049,4 +1049,4 @@ function reduceTextWidth(text, font, width) {
 
 // window.onload = init;
 
-export { init, start };
+export { init_member, start };

@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Tabs, Flowbite, Dropdown } from "flowbite-react";
+import { Modal } from "flowbite-react";
 import * as mainScript from "../js/members/main";
 import { useScreenSize } from "../hooks";
+
+const FooterAction = {
+  Credit: "CREDIT",
+  HowToPlay: "HOW TO PLAY",
+  Contact: "CONTACT",
+};
 
 const MobileView = ({}) => {
   return (
@@ -13,8 +19,8 @@ const MobileView = ({}) => {
       <div
         className="starting start button"
         onClick={() => {
-          mainScript.init();
-          mainScript.start();
+          mainScript.init_member();
+          mainScript.init_member();
         }}
       >
         Boku Ga Mitakatta Aozora Members Sorter
@@ -55,7 +61,7 @@ const LaptopView = ({}) => {
       <div
         className="starting start button"
         onClick={() => {
-          mainScript.init();
+          mainScript.init_member();
           mainScript.start();
         }}
       >
@@ -95,6 +101,11 @@ const LaptopView = ({}) => {
 
 const SorterMemberPage = ({}) => {
   const screenSize = useScreenSize();
+  const [settledFooterAction, setFooterAction] = useState("");
+
+  const onClickFooterAction = (action) => {
+    setFooterAction(action);
+  };
 
   return (
     <div>
@@ -116,45 +127,91 @@ const SorterMemberPage = ({}) => {
           <div className="time taken"></div>
           <div className="results"></div>
 
-          {/* TODO : jadiin ini modal CREDIT | HOW TO PLAY | CONTACT */}
-          <div className="info">
-            {/* <a href="mailto:gatholocogandhul@gmail.com">Contact</a> |
-            <a href="https://github.com/execfera/charasort/">Source Code</a> |
-            <a className="clearsave">Clear Save Data</a>
-            <br />
-            <br />
-            <p>
-              Sorter for Boku Ga Mitakatta Aozora Members. Pick your sources,
-              and hit the Start button.
-            </p>
-            <p>
-              <strong>
-                Certain options have details that you can hover to read.
-              </strong>
-            </p>
-            <p>
-              Click on the character you like better from the two, or tie them
-              if you like them equally or don't know them.
-            </p>
-            <br />
-            <br />
-            <p>
-              Keyboard controls during sorting: H/LeftArrow (pick left)
-              J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S
-              (save progress).
-            </p>
-            <p>Before sorting: S/Enter (start sorting) L (load progress).</p>
-            <p>1/2/3 always correspond to the first/second/third buttons.</p>
-            <br />
-            <br />
-            <p>
-              Inspired by
-              <a href="http://mainyan.sakura.ne.jp/thsort.html">this site</a>.
-            </p>
-            <br />
-            <br />
-            <p>20230716 - Added 1st Generation.</p> */}
+          <div className="info"></div>
+
+          <div className="flex gap-3">
+            <span
+              className="cursor-pointer"
+              onClick={() => onClickFooterAction(FooterAction.Credit)}
+            >
+              {FooterAction.Credit}
+            </span>
+            <span>|</span>
+            <span
+              className="cursor-pointer"
+              onClick={() => onClickFooterAction(FooterAction.HowToPlay)}
+            >
+              {FooterAction.HowToPlay}
+            </span>
+            <span>|</span>
+            <span
+              className="cursor-pointer"
+              onClick={() => onClickFooterAction(FooterAction.Contact)}
+            >
+              {FooterAction.Contact}
+            </span>
           </div>
+
+          <Modal
+            show={!!settledFooterAction}
+            onClose={() => setFooterAction("")}
+            position={"bottom-center"}
+            className="mobile:pt-[50%] laptop:pt-[10%]"
+          >
+            <Modal.Header>{settledFooterAction}</Modal.Header>
+            <Modal.Body className="pt-0">
+              <div className="space-y-6">
+                {settledFooterAction == FooterAction.Credit && (
+                  <div>
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      Inspired by
+                      <a
+                        target="blank"
+                        href="http://mainyan.sakura.ne.jp/thsort.html"
+                      >
+                        {" "}
+                        this site
+                      </a>
+                      .
+                    </p>
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      Source code from
+                      <a
+                        target="blank"
+                        href="https://github.com/execfera/charasort/"
+                      >
+                        {" "}
+                        this repo
+                      </a>
+                      .
+                    </p>
+                  </div>
+                )}
+
+                {settledFooterAction == FooterAction.HowToPlay && (
+                  <div>
+                    <p>
+                      Click on the character you like better from the two, or
+                      tie them if you like them equally or don't know them.
+                    </p>
+                  </div>
+                )}
+
+                {settledFooterAction == FooterAction.Contact && (
+                  <div>
+                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                      Contact me on X
+                      <a target="blank" href="https://x.com/ShiroSengkuni">
+                        {" "}
+                        @ShiroSengkuni
+                      </a>
+                      .
+                    </p>
+                  </div>
+                )}
+              </div>
+            </Modal.Body>
+          </Modal>
         </div>
       </div>
     </div>

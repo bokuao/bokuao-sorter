@@ -7,7 +7,7 @@ import { useDarkSide } from "../src/hooks";
 import { Tabs, Flowbite, Dropdown } from "flowbite-react";
 import theme from "../src/config/theme.config";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, SorterMember } from "./pages";
+import { HomePage, SorterMember, SorterSong } from "./pages";
 import bg1 from "./assets/bg_01.jpg";
 import bg2 from "./assets/bg_02.jpg";
 import bg3 from "./assets/bg_03.jpg";
@@ -15,6 +15,7 @@ import bg3 from "./assets/bg_03.jpg";
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
   { path: "/sorter/member", element: <SorterMember /> },
+  { path: "/sorter/song", element: <SorterSong /> },
 ]);
 
 function App() {

@@ -228,7 +228,7 @@ label:hover {
 }
 
 .result {
-  height: 15px;
+  height: 21px;
   margin-bottom: -1px;
   display: grid;
   width: 211px;
@@ -242,7 +242,7 @@ label:hover {
 }
 
 .result.image img {
-  height: 160px;
+  height: 153px;
 }
 
 .result.spacer {

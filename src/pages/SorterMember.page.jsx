@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Modal } from "flowbite-react";
 import * as mainScript from "../js/members/main";
 import { useScreenSize } from "../hooks";

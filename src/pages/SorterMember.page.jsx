@@ -45,7 +45,7 @@ const MobileView = ({}) => {
       <div className="finished getimg button">Generate Image</div>
       <div className="finished list button">Generate Text List</div>
 
-      <img src="assets/defaultR.jpg" className="right sort image" />
+      <img src="/bokuao-sorter/assets/defaultR.jpg" className="right sort image" />
 
       <div className="right sort text">
         <p></p>

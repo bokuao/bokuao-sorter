@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Tabs, Flowbite, Dropdown } from "flowbite-react";
-import Cloud2 from "../assets/cloud_s02.png";
+import Cloud2 from "/assets/cloud_s02.png";
 import { redirect, useNavigate } from "react-router-dom";
 import { useScreenSize } from "../hooks";
 

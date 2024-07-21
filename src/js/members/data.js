@@ -20,4 +20,4 @@ export let dataSetVersion = '2023-07-16';
 /**
  * Image root, will be appended to the start of every image URL.
  */
-export const imageRoot = '../src/assets/chars/';
+export const imageRoot = '/assets/chars/';

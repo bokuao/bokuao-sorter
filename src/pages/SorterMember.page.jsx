@@ -57,7 +57,7 @@ const MobileView = ({}) => {
 const LaptopView = ({}) => {
   return (
     <div className="sorter ">
-      <img src="../src/assets/defaultL.jpg" className="left sort image" />
+      <img src="./src/assets/defaultL.jpg" className="left sort image" />
       <div
         className="starting start button"
         onClick={() => {
@@ -87,7 +87,7 @@ const LaptopView = ({}) => {
       <div className="finished getimg button">Generate Image</div>
       <div className="finished list button">Generate Text List</div>
 
-      <img src="../src/assets/defaultR.jpg" className="right sort image" />
+      <img src="./src/assets/defaultR.jpg" className="right sort image" />
 
       <div className="left sort text">
         <p></p>

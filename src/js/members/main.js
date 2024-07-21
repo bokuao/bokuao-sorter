@@ -1,3 +1,5 @@
+import { dataSet, imageRoot } from "./data";
+
 /** @type {CharData} */
 let characterData = []; // Initial character data set used.
 /** @type {CharData} */

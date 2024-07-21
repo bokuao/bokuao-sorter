@@ -8,16 +8,16 @@
  * 
  * @type {Object.<string, {options: Options, characterData: CharData}>}
 */
-const dataSet = {};
+export const dataSet = {};
 
 /** 
  * Data set version, in YYYY-MM-DD form.
  * 
  * @example '2018-02-20'
 */
-let dataSetVersion = '';
+export let dataSetVersion = '2023-07-16';
 
 /**
  * Image root, will be appended to the start of every image URL.
  */
-const imageRoot = '../src/assets/chars/';
+export const imageRoot = '../src/assets/chars/';

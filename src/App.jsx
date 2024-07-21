@@ -21,6 +21,15 @@ const router = createHashRouter([
 function App() {
   useEffect(() => {
     generateRandomBG();
+
+    const script = document.createElement("script");
+    script.src = "/src/js/members/lz-string.min.js";
+    script.async = true;
+    script.onload = () => {
+      console.log("LOADED");
+    };
+
+    document.body.appendChild(script);
   }, []);
 
   const generateRandomBG = () => {

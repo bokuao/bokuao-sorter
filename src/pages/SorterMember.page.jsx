@@ -15,7 +15,7 @@ const MobileView = ({}) => {
       <div className="left sort text">
         <p></p>
       </div>
-      <img src="./assets/defaultL.jpg" className="left sort image" />
+      <img src="./bokuao-sorter/assets/defaultL.jpg" className="left sort image" />
       <div
         className="starting start button"
         onClick={() => {

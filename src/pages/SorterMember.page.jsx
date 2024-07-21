@@ -20,7 +20,7 @@ const MobileView = ({}) => {
         className="starting start button"
         onClick={() => {
           mainScript.init_member();
-          mainScript.init_member();
+          mainScript.start();
         }}
       >
         Boku Ga Mitakatta Aozora Members Sorter

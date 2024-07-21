@@ -41,7 +41,8 @@ import {
   TRACK_TITLE_DATA,
   TRACK_YOUTUBE_ID,
   TRACK_NAME,
-  TRACK_DESCRIPTION
+  TRACK_DESCRIPTION,
+  int_ResultRank 
 } from "./fnc_data_song";
 
 // Execution code

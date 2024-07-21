@@ -15,7 +15,7 @@ export const str_YouLink = 'https://www.youtube.com/watch?v=';
 export const str_SpotEmbed = 'https://open.spotify.com/embed/track/'
 
 // Up to which position should images be shown for?
-var int_ResultRank = 3;
+export var int_ResultRank = 3;
 
 // Maximum number of result rows before being broken off into another table.
 var maxRows = 42;

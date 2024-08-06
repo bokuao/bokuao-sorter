@@ -48,10 +48,10 @@ export const TITLE = deepFreeze({
 	// Single 3
 	Supekoi: {name: "Spare no Nai Koi", image: "", shortName: "Single 3 - Main Song (Yagi Toa Center)", abbrev: "Supekoi"},
 	Tomoyo: {name: "Tomo yo Koko de Sayonara da", image: "", shortName: "Single 3 - Coupling Song - Fairy Tail ED (Yagi Toa Center)", abbrev: "Tomoyo"},
-	// NamidaNaga: {name: "Namida wo Nagaresou", image: "", shortName: "Single 3 - Coupling Song - Kumogumi (Sugiura Eren Center)", abbrev: "NamidaNaga"},
-	// KuchiAe: {name: "Shoukouguchi De Aetara", image: "", shortName: "Single 3 - Unit Song (PoriSuu Duo)", abbrev: "KuchiAe"},
-	// BokuTotte: {name: "Boku ni Totte wa", image: "", shortName: "Single 3 - MCouplingain Song (XXX Center)", abbrev: "BokuTotte"},
-	// AnoHi: {name: "Ano hi Bokutachi wa Naiteita", image: "", shortName: "Single 3 - Coupling Song (XXX Center)", abbrev: "AnoHi"},
+	NamidaNaga: {name: "Namida wo Nagasou", image: "", shortName: "Single 3 - Coupling Song - Kumogumi (Sugiura Eren Center)", abbrev: "NamidaNaga"},
+	KuchiAe: {name: "Shoukouguchi De Aetara", image: "", shortName: "Single 3 - Unit Song (PoriSuu Duo)", abbrev: "KuchiAe"},
+	BokuTotte: {name: "Boku ni Totte wa", image: "", shortName: "Single 3 - Coupling Song (XXX Center)", abbrev: "BokuTotte"},
+	AnoHi: {name: "Ano hi Bokutachi wa Naiteita", image: "", shortName: "Single 3 - Coupling Song (XXX Center)", abbrev: "AnoHi"},
 });
 
 export const getTitleData = function (songTitleDataObj) {
@@ -72,7 +72,7 @@ export const getTitleData = function (songTitleDataObj) {
 export const CATEGORY = deepFreeze({
 	Single1: { name: "1st Single - Aozora ni Tsuite Kangaeru", titles: ["ATK", "TobaKami", "Parachute", "OSTonbo", "SukiNari"], },
 	Single2: { name: "2nd Single - Sotsugyou Made", titles: ["SotsuMade", "KimiUta", "KasuKibou", "KuraTetsu", "Masshirose"], },
-	Single3: { name: "3rd Single - Spare no Nai Koi (On Going)", titles: ["Supekoi", "Tomoyo"], },
+	Single3: { name: "3rd Single - Spare no Nai Koi (On Going)", titles: ["Supekoi", "Tomoyo", "NamidaNaga", "KuchiAe", "BokuTotte", "AnoHi"], },
 	// Other: { name: "Other", titles: ["BONUS"], },
 });
 
@@ -123,11 +123,10 @@ export var ary_SongData = [
 	["Kurayami no Tetsugakusha",	new Set([TITLE.KuraTetsu]), 	{ title: "KuraTetsu", }, 	"SPOTIFY|4d7rkYB3IiySUTQZKdwtRS", 	"暗闇の哲学者",			ORIGINAL_TRACK, OTHER_THEME],
 	["Masshiro ni Nurinaose!",		new Set([TITLE.Masshirose]), 	{ title: "Masshirose", }, 	"SPOTIFY|74x9XkvjBg8EWAbcpiKJTW", 	"真っ白に塗り直せ！",	ORIGINAL_TRACK, OTHER_THEME],
 	
-	["Spare no Nai Koi",				new Set([TITLE.Supekoi]), 	{ title: "Supekoi", }, 		"SPOTIFY|6XlKikhgA44Tmxw45CHA4o", 	"スペアのない恋", 		ORIGINAL_TRACK, OTHER_THEME],
-	["Tomo yo Koko de Sayonara da",		new Set([TITLE.Tomoyo]), 	{ title: "Tomoyo", }, 		"SPOTIFY|6BtRjP60Vf3G3ciyV0eaah", 	"友よ ここでサヨナラだ", 		ORIGINAL_TRACK, OTHER_THEME],
-	// ["Namida wo Nagaresou",				new Set([TITLE.NamidaNaga]), 	{ title: "NamidaNaga", }, 	"SPOTIFY|2moU0NTJBUW3XHLAtO3omm", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
-	// ["Shoukouguchi De Aetara",			new Set([TITLE.KuchiAe]), 		{ title: "KuchiAe", }, 		"SPOTIFY|2moU0NTJBUW3XHLAtO3omm", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
-	// ["Boku ni Totte wa",				new Set([TITLE.BokuTotte]), 	{ title: "BokuTotte", }, 	"SPOTIFY|2moU0NTJBUW3XHLAtO3omm", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
-	// ["Ano hi Bokutachi wa Naiteita",	new Set([TITLE.AnoHi]), 		{ title: "AnoHi", }, 		"SPOTIFY|2moU0NTJBUW3XHLAtO3omm", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
-
+	["Spare no Nai Koi",				new Set([TITLE.Supekoi]), 	{ title: "Supekoi", }, 		"SPOTIFY|1DxnwXTcbP8rXMqUTiux2c", 	"スペアのない恋", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Tomo yo Koko de Sayonara da",		new Set([TITLE.Tomoyo]), 	{ title: "Tomoyo", }, 		"SPOTIFY|1CweEn8KXJdIEXrmMWt9MW", 	"友よ ここでサヨナラだ", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Namida wo Nagaresou",				new Set([TITLE.NamidaNaga]), 	{ title: "NamidaNaga", }, 	"SPOTIFY|5S2U3NVuogRz0s9YNZYCfd", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Shoukouguchi De Aetara",			new Set([TITLE.KuchiAe]), 		{ title: "KuchiAe", }, 		"SPOTIFY|65gaxcpaazlZTjfNAHbbql", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Boku ni Totte wa",				new Set([TITLE.BokuTotte]), 	{ title: "BokuTotte", }, 	"SPOTIFY|2EgtUuPhcd6YkPCAVVmAUY", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Ano hi Bokutachi wa Naiteita",	new Set([TITLE.AnoHi]), 		{ title: "AnoHi", }, 		"SPOTIFY|316xGwM6rXGKYULrEMlPJP", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
 ];

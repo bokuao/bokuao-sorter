@@ -125,7 +125,7 @@ export var ary_SongData = [
 	
 	["Spare no Nai Koi",				new Set([TITLE.Supekoi]), 	{ title: "Supekoi", }, 		"SPOTIFY|1DxnwXTcbP8rXMqUTiux2c", 	"スペアのない恋", 		ORIGINAL_TRACK, OTHER_THEME],
 	["Tomo yo Koko de Sayonara da",		new Set([TITLE.Tomoyo]), 	{ title: "Tomoyo", }, 		"SPOTIFY|1CweEn8KXJdIEXrmMWt9MW", 	"友よ ここでサヨナラだ", 		ORIGINAL_TRACK, OTHER_THEME],
-	["Namida wo Nagaresou",				new Set([TITLE.NamidaNaga]), 	{ title: "NamidaNaga", }, 	"SPOTIFY|5S2U3NVuogRz0s9YNZYCfd", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
+	["Namida wo Nagasou",				new Set([TITLE.NamidaNaga]), 	{ title: "NamidaNaga", }, 	"SPOTIFY|5S2U3NVuogRz0s9YNZYCfd", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
 	["Shoukouguchi De Aetara",			new Set([TITLE.KuchiAe]), 		{ title: "KuchiAe", }, 		"SPOTIFY|65gaxcpaazlZTjfNAHbbql", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
 	["Boku ni Totte wa",				new Set([TITLE.BokuTotte]), 	{ title: "BokuTotte", }, 	"SPOTIFY|2EgtUuPhcd6YkPCAVVmAUY", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],
 	["Ano hi Bokutachi wa Naiteita",	new Set([TITLE.AnoHi]), 		{ title: "AnoHi", }, 		"SPOTIFY|316xGwM6rXGKYULrEMlPJP", 	"青空について考える", 		ORIGINAL_TRACK, OTHER_THEME],

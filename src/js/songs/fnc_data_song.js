@@ -72,7 +72,7 @@ export const getTitleData = function (songTitleDataObj) {
 export const CATEGORY = deepFreeze({
 	Single1: { name: "1st Single - Aozora ni Tsuite Kangaeru", titles: ["ATK", "TobaKami", "Parachute", "OSTonbo", "SukiNari"], },
 	Single2: { name: "2nd Single - Sotsugyou Made", titles: ["SotsuMade", "KimiUta", "KasuKibou", "KuraTetsu", "Masshirose"], },
-	Single3: { name: "3rd Single - Spare no Nai Koi (On Going)", titles: ["Supekoi", "Tomoyo", "NamidaNaga", "KuchiAe", "BokuTotte", "AnoHi"], },
+	Single3: { name: "3rd Single - Spare no Nai Koi", titles: ["Supekoi", "Tomoyo", "NamidaNaga", "KuchiAe", "BokuTotte", "AnoHi"], },
 	// Other: { name: "Other", titles: ["BONUS"], },
 });
 
